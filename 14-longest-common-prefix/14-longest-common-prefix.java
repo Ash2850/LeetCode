@@ -11,18 +11,16 @@ class Solution {
             count = 0;
             for(String s : strs){
                 String sub = new String();
-                if(i+1 <= s.length()){
+                if(i+1 <= s.length()){ //Possible flaw - check again later
                     sub = s.substring(0, i+1);
                 }
-                //System.out.println("Substring checked is "+ exp.substring(0,i+1));
+                
                 if(sub.contains(exp.substring(0, i+1))){
                     count ++;
-                    //System.out.println(String.format("Value of count is %d", count));
                 }
             }    
             if(count == strs.length){
                 maxLCP = i;
-                //System.out.println(String.format("Value of maxLCP is %d", maxLCP));
             }
             else if(count < strs.length && i == 0){ return new String();}
         }
