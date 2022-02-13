@@ -32,22 +32,14 @@ class Solution {
             }
             else{
                 if(nums[i] - nums[i-1] > 1){    
-                    System.out.println("Inside first duplication check");
-                    System.out.println(String.format("Numbers are %d and %d", nums[i], nums[i-1]));
                     String temp1 = helper.set2String(nums[i-1]+1, nums[i]-1);
-                    System.out.println(res);
                     if(!res.contains(temp1)){
-                        System.out.println("Inside equals comparision");
                         res.add(temp1);
                     }
                 }
                 if(nums[i+1] - nums[i] > 1){
-                    System.out.println("Inside second duplication check");
-                    System.out.println(String.format("Numbers are %d and %d", nums[i], nums[i+1]));
                     String temp = helper.set2String(nums[i]+1, nums[i+1]-1);
-                    System.out.println(res);
                     if(!res.contains(temp)){
-                        System.out.println("Inside equals comparision");
                         res.add(temp);
                     }
                 }
@@ -59,7 +51,6 @@ class Solution {
 
 class Helper{
     public String set2String(int l, int u){
-        System.out.println(String.format("Upper and lower bounds are %d and %d", u, l));
         if(l == u){
             return new String(Integer.toString(l));
         }
