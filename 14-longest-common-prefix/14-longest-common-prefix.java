@@ -27,3 +27,4 @@ class Solution {
         return new String(exp.substring(0, maxLCP+1));
     }
 }
+
